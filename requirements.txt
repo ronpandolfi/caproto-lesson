@@ -1,0 +1,9 @@
+numpy
+caproto
+adafruit-circuitpython-bme680
+pantilthat
+# picamera # No recent release; install issues fixed in repo, otherwise there's a workaround with an env variable
+git+git://github.com/waveform80/picamera
+sense_hat
+board
+# rtimulib # No recent release; install issues linked to newer os versions fixed in repo
