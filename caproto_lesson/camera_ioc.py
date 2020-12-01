@@ -6,8 +6,10 @@ from caproto.server import pvproperty, PVGroup, template_arg_parser, run
 import picamera
 import pantilthat
 
+
 SIZE_X = 320*2**3 # True resolution is: 4056
 SIZE_Y = 240*2**3 #                     3040
+
 
 class Camera(PVGroup):
     def __init__(self, *args, **kwargs):
@@ -54,6 +56,10 @@ class Camera(PVGroup):
     @Tilt.putter
     async def Tilt(self, instance, value):
         self.pantilthat.tilt(value)
+
+# Another option is to implement devices directly with ophyd objects. This will cut out one step of IPC, however fewer
+# tools support ophyd objects directly.
+# https://gist.github.com/danielballan/84484f940aea836ac997d3873c88d762
 
 
 if __name__ == "__main__":

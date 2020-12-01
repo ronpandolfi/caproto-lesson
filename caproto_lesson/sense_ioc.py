@@ -50,6 +50,8 @@ class Sense(PVGroup):
         await instance.loop.run_in_executor(None, sense.show_message, value, self.scroll_speed, self.text_colour, self.back_colour)
         return value  # TODO: why is this value not set?
 
+# TODO: check with put completion
+# caput -c <-
 
 if __name__ == "__main__":
     parser, split_args = template_arg_parser(default_prefix='Sense:', desc='Raspberry Pi SenseHat')
